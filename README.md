@@ -1,5 +1,5 @@
 # mongodb
-Mongo DB and Spring Boot
+Mongo DB and Spring Boot using RESTful services
 
 Requirements:
 - Java 8
