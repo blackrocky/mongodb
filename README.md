@@ -8,7 +8,8 @@ Mongo DB and Spring Boot using RESTful services
 
 # Starting up app:
 - Start up mongodb
-- run gradle bootRun
+- run ./gradlew bootRun
+- to add jvm args, run ./gradlew bootRun -PjvmArgs="-D<key1>=<value1> -D<key2>=<value2>"
 
 # curl commands:
 - curl http://localhost:8080
@@ -24,7 +25,12 @@ Mongo DB and Spring Boot using RESTful services
 # Mongo DB commands
 To have launchd start mongodb at login:
     ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+    
 Then to load mongodb now:
     launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+
+To unload mongodb now:
+    launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+
 Or, if you don't want/need launchctl, you can just run:
     mongod --config /usr/local/etc/mongod.conf
